@@ -7,15 +7,16 @@ class Seed
   end
 
   def generate_parks
-    types = ["National Park", "National Monument"]
-    10.times do |i|
-      type = "National Trail"
+    types = ["National Park", "National Monument", "National Trail"]
+    30.times do |i|
       if i % 2 == 0
         type = types[0]
+      elsif i % 3 == 0
+        type = types[2]
       else
         type = types[1]
       end
-      park = Park.create!(name: Faker::Nation.capital_city, location: Faker::Address.state, type: type, description: Faker::Lorem.paragraph(sentence_count: 4))
+      park = Park.create!(name: Faker::Nation.capital_city, location: Faker::Address.state, kind: type, description: Faker::Lorem.paragraph(sentence_count: 4))
       puts "Park #{i}: name is #{park.name}."
     end
   end

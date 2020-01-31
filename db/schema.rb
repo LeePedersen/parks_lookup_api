@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2020_01_31_164250) do
   create_table "parks", force: :cascade do |t|
     t.string "name"
     t.string "location"
-    t.string "type"
+    t.string "kind"
     t.string "description"
   end
 
