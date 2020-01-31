@@ -25,12 +25,22 @@ class ParksController < ApplicationController
     @park.destroy
   end
 
+  def random
+    park_ids = []
+    Park.all.each do |park|
+      park_ids.push(park.id)
+    end
+    id = park_ids[rand(Park.all.length)]
+    @park = Park.find(id)
+    json_response(@park)
+  end
+
   private
   def json_response(object, status = :ok)
     render json: object, status: status
   end
 
   def park_params
-    params.permit(:name, :location, :type, :description)
+    params.permit(:name, :location, :kind, :description)
   end
 end
