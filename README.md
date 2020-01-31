@@ -22,7 +22,7 @@ _This is an api to keep track of national parks_
 
 | method | endpoint | description | params |
 | --- | --- | --- | --- |
-| GET | `/parks`| lists all parks | |
+| GET | `/parks`| lists 30 parks, defaults to first 30 | page |
 | GET | `/park/{id}`| shows the park at id | |
 | POST | `/parks`| creates a park | name, location, kind, description |
 | DELETE | `/park/{id}` | deletes the park at id | |

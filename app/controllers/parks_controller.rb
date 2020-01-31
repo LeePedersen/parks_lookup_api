@@ -1,7 +1,7 @@
 class ParksController < ApplicationController
 
   def index
-    @parks = Park.all
+    @parks = Park.paginate(page: params[:page])
     json_response(@parks)
   end
 
@@ -53,10 +53,6 @@ class ParksController < ApplicationController
       render json: { status: "error", message: "Please pass into parameters a park name, location or kind to search for" }
     end
   end
-
-  # def sort
-  #   if params[:name]
-
 
   private
   def json_response(object, status = :ok)

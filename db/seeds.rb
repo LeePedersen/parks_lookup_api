@@ -8,7 +8,7 @@ class Seed
 
   def generate_parks
     types = ["National Park", "National Monument", "National Trail"]
-    30.times do |i|
+    60.times do |i|
       if i % 2 == 0
         type = types[0]
       elsif i % 3 == 0
