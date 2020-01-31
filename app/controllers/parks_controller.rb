@@ -35,6 +35,11 @@ class ParksController < ApplicationController
     json_response(@park)
   end
 
+  def search
+    @parks = Park.all.where("lower(name) LIKE :search", search: params[:search].downcase)
+    json_response(@parks)
+  end
+
   private
   def json_response(object, status = :ok)
     render json: object, status: status
