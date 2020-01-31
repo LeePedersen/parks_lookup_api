@@ -43,8 +43,14 @@ class ParksController < ApplicationController
     if params[:name]
       @parks = Park.all.where("lower(name) LIKE :search", search: params[:name].downcase)
       json_response(@parks)
+    elsif params[:location]
+      @parks = Park.all.where("lower(location) LIKE :search", search: params[:location].downcase)
+      json_response(@parks)
+    elsif params[:kind]
+      @parks = Park.all.where("lower(kind) LIKE :search", search: params[:kind].downcase)
+      json_response(@parks)
     else
-      render json: { status: "error", message: "Please pass in a park name to search for" }
+      render json: { status: "error", message: "Please pass into parameters a park name, location or kind to search for" }
     end
   end
 
