@@ -10,13 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_31_164250) do
+ActiveRecord::Schema.define(version: 2020_01_31_210521) do
 
   create_table "parks", force: :cascade do |t|
     t.string "name"
     t.string "location"
     t.string "kind"
     t.string "description"
+    t.string "picture_file_name"
+    t.string "picture_content_type"
+    t.bigint "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
 end

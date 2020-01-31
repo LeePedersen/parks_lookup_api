@@ -60,6 +60,6 @@ class ParksController < ApplicationController
   end
 
   def park_params
-    params.permit(:name, :location, :kind, :description)
+    params.permit(:name, :location, :kind, :description, :picture)
   end
 end
