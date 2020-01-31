@@ -16,7 +16,7 @@ class Seed
       else
         type = types[1]
       end
-      park = Park.create!(name: Faker::Nation.capital_city, location: Faker::Address.state, kind: type, description: Faker::Lorem.paragraph(sentence_count: 4))
+      park = Park.create!(name: Faker::Nation.capital_city, location: Faker::Address.state, kind: type, description: Faker::Lorem.paragraph(sentence_count: 4), picture_file_name: Faker::LoremPixel.image)
       puts "Park #{i}: name is #{park.name}."
     end
   end
