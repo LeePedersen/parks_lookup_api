@@ -33,7 +33,7 @@ gem 'faker'
 gem 'jquery-rails'
 gem 'jwt'
 gem 'simple_command'
-gem 'paperclip'
+# gem 'paperclip'
 gem 'jbuilder', '~> 2.0'
 gem 'rack-cors'
 
