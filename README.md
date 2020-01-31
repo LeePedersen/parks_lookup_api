@@ -27,8 +27,9 @@ _This is an api to keep track of national parks_
 | POST | `/parks`| creates a park | name, location, kind, description |
 | DELETE | `/park/{id}` | deletes the park at id | |
 | PUT | `/parks/id` | updates park at id | name, location, kind, description |
-| GET | `/search` | finds park by name | name |
+| GET | `/search` | finds park by name, location, or kind | name OR location OR kind |
 | GET | `/random` | returns a random park | |
+| GET | `/sort` | returns parks sorted by name, location or kind | name OR location OR kind |
 
 ## Support and Contact Details
 _For issues contact support@leepedersen.com_
