@@ -2,6 +2,10 @@
 
 #### _Lee Pedersen_
 
+## To Grader:
+
+_This is the authentication token I created. It should be valid until next friday_
+
 ## Description
 
 _This is an api to keep track of national parks_

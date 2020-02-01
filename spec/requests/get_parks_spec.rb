@@ -46,3 +46,14 @@ describe "post a park route", :type => :request do
     expect(response).to have_http_status(:created)
   end
 end
+
+describe "get a random park", :type => :request do
+
+  before do
+    get '/random'
+  end
+
+  it 'returns a single random park' do
+    expect(JSON.parse(response.body).size).to eq(6)
+  end
+end
