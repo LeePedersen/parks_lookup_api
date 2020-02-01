@@ -2,13 +2,13 @@
 
 #### _Lee Pedersen_
 
-## To Grader:
-
-_This is the authentication token I created. It should be valid until next friday_
-
 ## Description
 
 _This is an api to keep track of national parks_
+
+## Known bugs
+
+_Authentication isn't actually working yet. I have a lot of the framework for it but I'm not using it right now_
 
 ## Versions:
 * _Rails 5.2.4.1_
